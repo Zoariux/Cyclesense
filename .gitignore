@@ -1,0 +1,15 @@
+# Python stuff
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Your secret data
+.local/
+*.key
+data/
+*.db
+
+# Editor files
+.vscode/
+.idea/
