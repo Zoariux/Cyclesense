@@ -194,7 +194,7 @@ with col_title:
     st.markdown('<p class="subtitle">Manage your personal profiles</p>', unsafe_allow_html=True)
 
 users = list_users()
-max_users = 3
+max_users = 5
 
 # Check if user needs to complete profile
 if st.session_state.get("selected_user_id"):
