@@ -327,13 +327,13 @@ if messages:
 # Resources
 st.markdown("<br><br>", unsafe_allow_html=True)
 
-st.markdown("""
-<div style="background: white; border: 2px solid #ffd6e8; border-radius: 20px; padding: 2rem;">
-    <h4 style="color: #d63384; margin-bottom: 1rem;">📚 Helpful Resources</h4>
-    <div style="color: #2d1b28; line-height: 2; font-weight: 500;">
-        • <a href="https://www.plannedparenthood.org" target="_blank" style="color: #e91e63;">Planned Parenthood</a> - Comprehensive health info<br>
-        • <a href="https://www.womenshealth.gov" target="_blank" style="color: #e91e63;">Women's Health</a> - Government health resources<br>
-        • <a href="https://kidshealth.org/en/teens" target="_blank" style="color: #e91e63;">KidsHealth for Teens</a> - Teen-specific health info
-    </div>
-</div>
-""", unsafe_allow_html=True)
+# st.markdown("""
+# <div style="background: white; border: 2px solid #ffd6e8; border-radius: 20px; padding: 2rem;">
+#     <h4 style="color: #d63384; margin-bottom: 1rem;">📚 Helpful Resources</h4>
+#     <div style="color: #2d1b28; line-height: 2; font-weight: 500;">
+#         • <a href="https://www.plannedparenthood.org" target="_blank" style="color: #e91e63;">Planned Parenthood</a> - Comprehensive health info<br>
+#         • <a href="https://www.womenshealth.gov" target="_blank" style="color: #e91e63;">Women's Health</a> - Government health resources<br>
+#         • <a href="https://kidshealth.org/en/teens" target="_blank" style="color: #e91e63;">KidsHealth for Teens</a> - Teen-specific health info
+#     </div>
+# </div>
+# """, unsafe_allow_html=True)

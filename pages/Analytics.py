@@ -89,6 +89,74 @@ st.markdown("""
         color: #e91e63 !important;
         font-weight: 700 !important;
     }
+            
+    /* Fix Plotly chart axis text */
+    .js-plotly-plot .plotly .xtick text,
+    .js-plotly-plot .plotly .ytick text {
+        fill: #4a2e42 !important;
+    }
+    
+    /* Fix chart axis titles */
+    .js-plotly-plot .plotly .g-xtitle text,
+    .js-plotly-plot .plotly .g-ytitle text {
+        fill: #4a2e42 !important;
+    }
+
+    /* Fix expander text (View All Cycles button) */
+    .streamlit-expanderHeader p,
+    .streamlit-expanderHeader {
+        color: #2d1b28 !important;
+        font-weight: 600 !important;
+    }
+
+    /* Fix all text inside expander */
+    .streamlit-expanderContent p,
+    .streamlit-expanderContent span,
+    .streamlit-expanderContent small {
+        color: #2d1b28 !important;
+    }
+
+    /* Fix metric labels and captions */
+    [data-testid="stMetricLabel"] p {
+        color: #6c4a5e !important;
+        font-weight: 600 !important;
+    }
+
+    div[data-testid="stCaptionContainer"] p {
+        color: #6c4a5e !important;
+        font-weight: 500 !important;
+    }
+
+    /* Fix general paragraph text throughout page */
+    .stMarkdown p, 
+    .stMarkdown span,
+    .stMarkdown small {
+        color: #2d1b28 !important;
+    }
+            
+    /* Fix expander button text */
+    button[data-testid="stExpanderToggleIcon"],
+    .st-emotion-cache-1h9usn1 p,
+    details summary p,
+    details > summary {
+        color: #2d1b28 !important;
+        font-weight: 600 !important;
+    }
+
+    /* Target expander specifically by Streamlit's data attribute */
+    [data-testid="stExpander"] summary span p,
+    [data-testid="stExpander"] summary span,
+    [data-testid="stExpander"] summary p,
+    [data-testid="stExpander"] summary {
+        color: #2d1b28 !important;
+        font-weight: 600 !important;
+    }
+
+    /* Fallback — target all summary elements */
+    details summary {
+        color: #2d1b28 !important;
+        font-weight: 600 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -241,12 +309,21 @@ if complete_cycles:
         height=400,
         plot_bgcolor='white',
         paper_bgcolor='white',
-        xaxis=dict(showgrid=False, title=""),
+        xaxis=dict(
+            showgrid=False,
+            title="",
+            tickfont=dict(color="#4a2e42", size=13),
+        ),
         yaxis=dict(
             showgrid=True,
             gridcolor='rgba(255, 214, 232, 0.5)',
-            title="Days"
+            title=dict(                               # ✅ Correct modern syntax
+                text="Days",
+                font=dict(color="#4a2e42")
+            ),
+            tickfont=dict(color="#4a2e42", size=13),
         ),
+        font=dict(color="#4a2e42"),
         margin=dict(l=20, r=20, t=20, b=20)
     )
     

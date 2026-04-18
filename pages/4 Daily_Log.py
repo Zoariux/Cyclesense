@@ -85,6 +85,31 @@ st.markdown("""
         font-size: 1.1rem !important;
     }
     
+    /* Fix Radio Button Option Text */
+    .stRadio > div[role="radiogroup"] label p {
+        color: #2d1b28 !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Fix Caption Text */
+    .stCaptionContainer p,
+    div[data-testid="stCaptionContainer"] p {
+        color: #6c4a5e !important;
+        font-weight: 500 !important;
+    }
+    
+    /* Fix ALL form text visibility */
+    .stMarkdown p {
+        color: #2d1b28 !important;
+    }
+    
+    /* Fix any remaining invisible text in forms */
+    div[data-testid="stForm"] p,
+    div[data-testid="stForm"] label,
+    div[data-testid="stForm"] span {
+        color: #2d1b28 !important;
+    }
+    
     /* Slider */
     .stSlider > label {
         color: #4a2e42 !important;
